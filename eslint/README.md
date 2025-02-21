@@ -8,8 +8,6 @@ npm i
 
 ## Baseline Widely available
 
-
-
 ```sh
-npm run lint
+npx eslint src/test.css
 ```
