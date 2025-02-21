@@ -16,7 +16,7 @@ npx eslint src/test.css
 
 In [eslint.config.mjs](eslint.config.mjs) change the [`available`](https://github.com/eslint/css/blob/HEAD/docs/rules/require-baseline.md#options) option of the require-baseline rule to "newly":
 
-```json
+```js
 rules: {
   "css/require-baseline": ["warn", {
     "available": "newly"
