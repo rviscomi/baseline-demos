@@ -116,4 +116,4 @@ and_qq >= 14.2
 
 _(Exact browser versions will depend on when you ran the command.)_
 
-To verify that this config includes all versions in use 2.5 years ago and newer, run `npx browserslist` and note that the earlest Chrome version will be 1 version older than the one in the previous config.
+Note that the earlest Chrome version will be 1 version older than the one in the previous config, eg Chrome 104.
