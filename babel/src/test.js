@@ -1,5 +1,3 @@
-// Example JavaScript code to test Babel transpilation
-
 // Arrow functions
 const add = (a, b) => a + b;
 console.log(add(5, 3));

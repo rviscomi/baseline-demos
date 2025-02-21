@@ -1,3 +1,15 @@
 # Baseline demo: eslint
 
-TODO
+## Setup
+
+```sh
+npm i
+```
+
+## Baseline Widely available
+
+
+
+```sh
+npm run lint
+```
