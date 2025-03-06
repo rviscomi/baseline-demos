@@ -32,6 +32,7 @@ body {
 
 /* baseline/has: low */
 .container:has(.card:hover) {
+  /* baseline/outline: low */
   outline: 2px solid rebeccapurple;
 }
 
