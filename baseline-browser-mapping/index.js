@@ -1,3 +1,5 @@
-import { getMinimumByYear } from "baseline-browser-mapping";
+import { getCompatibleVersions } from "baseline-browser-mapping";
 
-console.log(getMinimumByYear('2020', true).map(({browser, version}) => `${browser} ${version}`).join("\n"));
+console.log(getCompatibleVersions({
+  includeDownstreamBrowsers: true,
+}).map(({browser, version}) => `${browser} ${version}`).join("\n"));
