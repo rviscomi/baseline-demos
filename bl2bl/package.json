@@ -1,0 +1,23 @@
+{
+  "name": "bl2bl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "execute-bl2bl": "npm i @mdn/browser-compat-data@latest baseline-browser-mapping@latest; npx bl2bl"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mdn/browser-compat-data": "^5.7.1",
+    "baseline-browser-mapping": "^1.0.0",
+    "bl2bl": "^0.2.0-beta.2"
+  },
+  "bl2bl": {
+    "baselineThreshold": "widely available",
+    "useBrowserslistrc": true,
+    "downstreamBrowsers": false,
+    "savePrevious": false
+  }
+}

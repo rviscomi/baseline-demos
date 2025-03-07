@@ -1,0 +1,9 @@
+# This file was created by bl2bl2. 
+# Learn more at https://github.com/web-platform-dx/bl2bl
+Chrome >= 105
+ChromeAndroid >= 105
+Edge >= 105
+Firefox >= 104
+FirefoxAndroid >= 104
+Safari >= 15.6
+iOS >= 15.6
