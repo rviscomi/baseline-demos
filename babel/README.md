@@ -40,8 +40,8 @@ var add = function add(a, b) {
 
 File | Size (KB)
 -- | --
-src/test.js | 0.9
-lib/test.js | 2.6
+src/test.js | 1.3
+lib/test.js | 13.2
 
 ## Pseudo-Baseline config
 
@@ -59,15 +59,16 @@ The browserslist config allows rules that will get you most of the way to Baseli
     and_ff >0 and last 2.5 years
     ios >0 and last 2.5 years
     ```
-3. Run `npm run build`
-4. Open [lib/test.js](lib/test.js) to see the output
+3. Run `npx browserslist` to see the browser versions included in the browserslist config
+4. Run `npm run build`
+5. Open [lib/test.js](lib/test.js) to see the output
 
 The output file should now contain the modern JavaScript with minimal transformations.
 
 File | Size (KB)
 -- | --
-src/test.js | 0.9
-lib/test.js | 1.0
+src/test.js | 1.3
+lib/test.js | 1.4
 
 > [!NOTE]
 > This browserlist config was first suggested by [Philip Walton](https://philipwalton.com/articles/the-state-of-es5-on-the-web/#recommendations)
@@ -78,22 +79,76 @@ lib/test.js | 1.0
 >
 > To confirm the second issue, run `npx browserslist` and note the earliest Chrome version, eg Chrome 105. Its release date will always be after today's date 2.5 years ago.
 >
-> The next config addresses these limitations.
+> bl2bl addresses these limitations.
+
+## `browserslist-config-baseline` default
+
+The `browsers-list-config-baseline` plugin's default config is identical to the previous pseudo-Baseline config. To use it:
+
+1. Open [.browserslistrc](.browserslistrc)
+2. Replace the contents with
+
+  ```
+  extends browserslist-config-baseline/
+  ```
+3. Run `npx browserslist` to see the browser versions included in the browserslist config
+4. Run `npm run build`
+5. Open [lib/test.js](lib/test.js) to see the output
+
+File | Size (KB)
+-- | --
+src/test.js | 1.3
+lib/test.js | 1.4
+
+## `browserslist-config-baseline` Baseline year
+
+1. Open [.browserslistrc](.browserslistrc)
+2. Replace the contents with
+
+  ```
+  extends browserslist-config-baseline/2020
+  ```
+3. Run `npx browserslist` to see the browser versions included in the browserslist config
+4. Run `npm run build`
+5. Open [lib/test.js](lib/test.js) to see the output
+
+File | Size (KB)
+-- | --
+src/test.js | 1.3
+lib/test.js | 1.5
+
+## `browserslist-config-baseline` Baseline year with downstream browsers
+
+1. Open [.browserslistrc](.browserslistrc)
+2. Replace the contents with
+
+  ```
+  extends browserslist-config-baseline/with-downstream/2020
+  ```
+3. Run `npx browserslist` to see the browser versions included in the browserslist config
+4. Run `npm run build`
+5. Open [lib/test.js](lib/test.js) to see the output
+
+File | Size (KB)
+-- | --
+src/test.js | 1.3
+lib/test.js | 1.5
 
 ## Baseline Widely available (bl2bl)
 
-If you followed the [setup](#setup) steps, you will have installed the [bl2bl](https://github.com/tonypconway/bl2bl) helper module, which lets you use Baseline semantics like "Widely available" and turn that into the corresponding browserslist config. To use it:
+If you followed the [setup](#setup) steps, you will have installed the [bl2bl](https://github.com/web-platform-dx/bl2bl) helper module, which lets you use Baseline semantics like "Widely available" and turn that into the corresponding browserslist config. To use it:
 
 1. Run `npx bl2bl` to set the browserslist config to Baseline Widely available, which is specified in [package.json](package.json)
-2. Run `npm run build`
-3. Open [lib/test.js](lib/test.js) to see the output
+2. Run `npx browserslist` to see the browser versions included in the browserslist config
+3. Run `npm run build`
+4. Open [lib/test.js](lib/test.js) to see the output
 
 As before, the output file should still contain the modern JavaScript with minimal transformations.
 
 File | Size (KB)
 -- | --
-src/test.js | 0.9
-lib/test.js | 1.0
+src/test.js | 1.3
+lib/test.js | 1.4
 
 You can also inspect the updated [.browserslistrc](.browserslistrc) config, which should look something like this:
 
