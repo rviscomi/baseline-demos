@@ -1,6 +1,11 @@
-import { getStatus } from 'compute-baseline';
+import { computeBaseline, getStatus } from 'compute-baseline';
 
-console.log(JSON.stringify(
-  getStatus('table', 'css.properties.border-collapse.collapse'),
-  null, 2
-));
+const bcdKey = 'css.properties.font-stretch';
+
+const status = computeBaseline({compatKeys: [bcdKey]});
+
+console.log(
+  status.toJSON()
+);
+
+console.log(getStatus('', bcdKey))
