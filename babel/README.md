@@ -78,12 +78,10 @@ lib/test.js | 1.4
 > - it omits the earliest browser version available at the time 2.5 years ago
 >
 > To confirm the second issue, run `npx browserslist` and note the earliest Chrome version, eg Chrome 105. Its release date will always be after today's date 2.5 years ago.
->
-> bl2bl addresses these limitations.
 
 ## `browserslist-config-baseline` default
 
-The `browsers-list-config-baseline` plugin's default config is identical to the previous pseudo-Baseline config. To use it:
+The default configuration of the [`browserslist-config-baseline`](https://github.com/web-platform-dx/browserslist-config-baseline) plugin is identical to the pseudo-Baseline config above. To use it:
 
 1. Open [.browserslistrc](.browserslistrc)
 2. Replace the contents with
@@ -134,41 +132,36 @@ File | Size (KB)
 src/test.js | 1.3
 lib/test.js | 1.5
 
-## Baseline Widely available (bl2bl)
+## Baseline Widely available
 
-If you followed the [setup](#setup) steps, you will have installed the [bl2bl](https://github.com/web-platform-dx/bl2bl) helper module, which lets you use Baseline semantics like "Widely available" and turn that into the corresponding browserslist config. To use it:
+1. Open [.browserslistrc](.browserslistrc)
+2. Replace the contents with
 
-1. Run `npx bl2bl` to set the browserslist config to Baseline Widely available, which is specified in [package.json](package.json)
-2. Run `npx browserslist` to see the browser versions included in the browserslist config
-3. Run `npm run build`
-4. Open [lib/test.js](lib/test.js) to see the output
-
-As before, the output file should still contain the modern JavaScript with minimal transformations.
+  ```
+  extends browserslist-config-baseline
+  ```
+3. Run `npx browserslist` to see the browser versions included in the browserslist config
+4. Run `npm run build`
+5. Open [lib/test.js](lib/test.js) to see the output
 
 File | Size (KB)
 -- | --
 src/test.js | 1.3
 lib/test.js | 1.4
 
-You can also inspect the updated [.browserslistrc](.browserslistrc) config, which should look something like this:
+## Baseline Widely available with downstream browsers
 
-```
-# This file was created by bl2bl2. 
-# Learn more at https://github.com/tonypconway/bl2bl
-Chrome >= 104
-ChromeAndroid >= 104
-Edge >= 104
-Firefox >= 103
-FirefoxAndroid >= 103
-Safari >= 15
-iOS >= 15
-Opera >= 90
-op_mob >= 71
-Samsung >= 20.0
-Android >= 104
-and_qq >= 14.2
-```
+1. Open [.browserslistrc](.browserslistrc)
+2. Replace the contents with
 
-_(Exact browser versions will depend on when you ran the command.)_
+  ```
+  extends browserslist-config-baseline/with-downstream
+  ```
+3. Run `npx browserslist` to see the browser versions included in the browserslist config
+4. Run `npm run build`
+5. Open [lib/test.js](lib/test.js) to see the output
 
-Note that the earlest Chrome version will be 1 version older than the one in the previous config, eg Chrome 104.
+File | Size (KB)
+-- | --
+src/test.js | 1.3
+lib/test.js | 1.4

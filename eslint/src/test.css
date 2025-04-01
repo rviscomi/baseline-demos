@@ -1,35 +1,23 @@
 body {
-  /* baseline/grid: high */
   display: grid;
   grid-template-columns: 1fr minmax(200px, 300px) 1fr;
   gap: 1rem;
   font-family: system-ui, sans-serif;
-  /* baseline/color-mix: low */
   background: color-mix(in srgb, lightblue, white 80%);
-  /* baseline/container-queries: low */
   container-type: inline-size;
-  /* baseline/accent-color: false*/
   accent-color: fuchsia;
 }
 
 .card {
-  /* baseline/aspect-ratio: high */
   aspect-ratio: 16 / 9;
-  /* baseline/gradients: high */
   background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.75));
-  /* baseline/overflow-shorthand: high */
   overflow: clip;
-  /* baseline/view-transitions: false */
   view-transition-name: card-transition; /* eslint-disable-line css/require-baseline */
-  /* baseline/font-language-override: false */
   font-language-override: normal;
 }
 
-/* baseline/media-queries: high */
-/* baseline/prefers-color-scheme: high */
 @media (prefers-color-scheme: dark) {
   body {
-    /* baseline/color-mix: low */
     background: color-mix(in srgb, black, #333 80%);
   }
 }
@@ -51,8 +39,6 @@ img {
 }
 
 .anchor {
-  /* baseline/anchor-name: false */
   anchor-name: --myAnchor;
-  /* baseline/box-pack: false */
   box-pack: 12;
 }
