@@ -98,6 +98,15 @@ File | Size (KB)
 src/test.js | 1.3
 lib/test.js | 1.4
 
+Note: Alternatively you can specify the browserslist target in `babel.config.json`:
+
+```diff
+{
+  "presets": ["@babel/preset-env"],
++ "targets": "extends browserslist-config-baseline/"
+}
+```
+
 ## `browserslist-config-baseline` Baseline year
 
 1. Open [.browserslistrc](.browserslistrc)
