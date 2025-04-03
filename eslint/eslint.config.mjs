@@ -16,7 +16,7 @@ export default [
     },
     language: "css/css",
     rules: {
-      "css/require-baseline": ["warn", {
+      "css/use-baseline": ["warn", {
         "available": "widely"
       }],
     },
