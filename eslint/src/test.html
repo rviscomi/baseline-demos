@@ -55,7 +55,7 @@
                     <li><a href="#main">Main Content</a></li>
                     <li><a href="#form-search">Form Section</a></li>
                     <li><a href="#newer-elements">Newer Elements</a></li>
-                    <li><a href="#old">Old Stuff</a></li>
+                    <li><a href="#old" referrerpolicy="origin-when-cross-origin">Old Stuff</a></li>
                 </ul>
             </nav>
         </header>
@@ -65,7 +65,7 @@
             <aside>
                 <h3>Sidebar</h3>
                 <p>Using the &lt;aside&gt; element.</p>
-                <img src="placeholder.jpg" alt="Placeholder" width="100" height="50">
+                <img src="placeholder.jpg" alt="Placeholder" width="100" height="50" fetchpriority="high" loading="eager">
             </aside>
 
             <article data-category="examples" data-timestamp="1712106600">
@@ -100,6 +100,8 @@
                     </form>
                 </section>
             </search>
+
+            <fencedframe></fencedframe>
 
             <section id="newer-elements">
                 <h2>Newer HTML Features</h2>

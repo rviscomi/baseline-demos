@@ -23,12 +23,12 @@ export default [
     },
   },
   {
-    files: ["**/*.html"],
     ...html.configs["flat/recommended"],
+    files: ["**/*.html"],
     rules: {
-      ...html.configs["flat/recommended"].rules,
-      "@html-eslint/attrs-newline": "off",
-      "@html-eslint/element-newline": "off",
+      "@html-eslint/use-baseline": ["warn", {
+        "available": "widely"
+      }],
     },
   },
 ];
