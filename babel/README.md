@@ -109,6 +109,8 @@ Note: Alternatively you can specify the browserslist target in `babel.config.jso
 
 ## `browserslist-config-baseline` Baseline year
 
+Set the Baseline year to 2020:
+
 1. Open [.browserslistrc](.browserslistrc)
 2. Replace the contents with
 
@@ -123,6 +125,23 @@ File | Size (KB)
 -- | --
 src/test.js | 1.3
 lib/test.js | 1.5
+
+Now let's see the effect of an even older Baseline year on bundle size:
+
+1. Open [.browserslistrc](.browserslistrc)
+2. Replace the contents with
+
+  ```
+  extends browserslist-config-baseline/2016
+  ```
+3. Run `npx browserslist` to see the browser versions included in the browserslist config
+4. Run `npm run build`
+5. Open [lib/test.js](lib/test.js) to see the output
+
+File | Size (KB)
+-- | --
+src/test.js | 1.3
+lib/test.js | 11.7
 
 ## `browserslist-config-baseline` Baseline year with downstream browsers
 
