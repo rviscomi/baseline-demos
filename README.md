@@ -6,4 +6,4 @@ A collection of demo apps built with Baseline-compatible developer tools
 
 ## [eslint](./eslint)
 
-## [PostCSS](./postcss)
+## [Stylelint](./stylelint)
