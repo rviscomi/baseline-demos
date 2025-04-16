@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "stylelint-plugin-require-baseline"
+  ],
+  "rules": {
+    "plugin/require-baseline": [
+      true,
+      {
+        "available": "widely"
+      }
+    ]
+  }
+}
