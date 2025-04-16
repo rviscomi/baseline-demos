@@ -1,0 +1,4 @@
+/* baseline/has (low) */
+p:has(i) {
+  color: sandybrown;
+}

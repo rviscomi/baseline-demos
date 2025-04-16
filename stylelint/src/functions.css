@@ -1,0 +1,7 @@
+a {
+  background: color-mix(in srgb, lightblue, white 80%);
+}
+
+div {
+  background: conic-gradient(from 0deg at 0% 25%, blue, green, yellow 180deg);
+}
