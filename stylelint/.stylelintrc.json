@@ -1,9 +1,9 @@
 {
   "plugins": [
-    "stylelint-plugin-require-baseline"
+    "stylelint-plugin-use-baseline"
   ],
   "rules": {
-    "plugin/require-baseline": [
+    "plugin/use-baseline": [
       true,
       {
         "available": "widely"

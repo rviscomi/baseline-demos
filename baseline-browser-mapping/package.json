@@ -1,15 +1,6 @@
 {
-  "name": "baseline-browser-mapping",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "baseline-browser-mapping": "^2.0.0-beta.1"
+    "baseline-browser-mapping": "^2.2.0"
   }
 }
