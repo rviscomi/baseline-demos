@@ -76,7 +76,7 @@ Now, the only feature that is not currently widely available and has fallbacks p
 
 ## `:has`
 
-`:has` became Baseline newly available in December 2023, but by default `postcss-preset-env` does not compile it. To fall back to older CSS, the feature needs to be enabled manually in `postcss.config.js`:
+`:has` became Baseline newly available in December 2023, but by default `postcss-preset-env` does not compile it. To fall back to older CSS when it doesn't meet your Baseline target, the [feature](https://github.com/csstools/postcss-plugins/blob/main/plugin-packs/postcss-preset-env/FEATURES.md) needs to be enabled manually in `postcss.config.js`:
 
 1. Open `postcss.config.js` and replace the contents with:
     ```js
